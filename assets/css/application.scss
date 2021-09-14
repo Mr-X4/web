@@ -1,0 +1,264 @@
+@import "_config";
+@import "_grid";
+body{
+  background-color:red;
+  min-height: 100vh;
+}
+.header-space{
+  height: 157px;
+}
+.application-header{
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: block;
+  position: fixed;
+  background-color:#f5f5dc;
+  .application-head{
+    padding: 0 25px;
+    .application-logo{
+      float: left;
+      margin: 21px 0 20px 0;
+      img{
+        max-width: 80px;
+      }
+    }
+    .application-name{
+      float: right;
+      margin: 30px 0;
+      font-family: 'poppins';
+      font-size: 18px;
+      line-height: 24px;
+      a{
+        color: #FF8E2A;
+      }
+    }
+  }
+  .application-menu{
+    ul{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      li{
+        display: block;
+        color: #fff;
+        background-color: #232323;
+        .active{
+          background-color: #FF8E2A;
+          color: #000;
+        }
+        button{
+          &:focus{
+            outline: none;
+          }
+          display: block;
+          text-align: center;
+          padding: 4px 0;
+          font-family: 'poppins';
+          font-size: 16px;
+          line-height: 41px;
+          background-color: transparent;
+          border: none;
+          color: inherit;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.tab{
+  display: block;
+  position: fixed;
+  top: 136px;
+  width: 100%;
+  height: calc(100% - 224px);
+  overflow-y: auto;
+  .tab-active{
+    left: 0 !important;
+  }
+  .tab-slide{
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    left: -100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition-property: left;
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+.application-news{
+  width: 100%;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-family: 'suisse';
+  font-size: 14px;
+  line-height: 21px;
+  padding: 19px 25px;
+}
+.application-platforms{
+  padding: 30px;
+  display: grid;
+  grid-column-gap: 35px;
+  grid : auto-flow 1fr / repeat(auto-fill, minmax(77px,1fr));
+  .platform{
+    margin-bottom: 10px;
+    text-align: center;
+    .icon{
+      display: block;
+      margin: 0 auto;
+      height: 60px;
+      width: 60px;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 12px 10px rgba(0, 0, 0, 0.87);
+      overflow: hidden;
+      img{
+        object-fit: cover;
+        object-position: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+    .title{
+      display: inline-block;
+      color: #fff;
+      font-family: "suisse";
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 15px;
+      position: relative;
+      .domail-name{
+        font-size: 10px;
+        display: block;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+.application-contact{
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #FF8E2A;
+  .contact-info{
+    border-left: 1px solid #0B0F10;
+    a{
+      display: block;
+      width: 100%;
+      padding: 8px 0;
+      text-align: center;
+      color: #fff;
+      i{
+        font-size: 26px;
+        display: block;
+      }
+      span{
+        margin-top: 4px;
+        display: block;
+        font-family: 'suisse';
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+.section{
+  display: block;
+  .section-title{
+    padding: 70px 0 28px 25px;
+    display: block;
+    font-family: 'suisse';
+    font-size: 21px;
+    line-height: 29px;
+    color: #FF8E2A;
+    border-bottom: 1px solid #343434;
+  }
+}
+.about{
+  padding: 28px 13px 0 20px;
+  font-family: 'suisse';
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+.content-block-2{
+
+  border-bottom: 1px solid #343434;
+  position: relative;
+  overflow: hidden;
+  .content{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 30px 13px 30px 18px;
+    background: transparent;
+    z-index: 3;
+    position: relative;
+    .option{
+      font-family: 'suisse';
+      font-size: 16px;
+      line-height: 21px;
+      color: #fff;
+
+    }
+    .value{
+      text-align: right;
+      font-family: 'suisse';
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+    }
+  }
+}
+.content-block-3{
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid : auto-flow 1fr / repeat(auto-fill, minmax(150px,1fr));
+  .content{
+    img{
+      margin: 0 auto;
+      height: 96px;
+      display: block;
+    }
+  }
+}
+.content-block-4{
+  position: relative;
+  overflow: hidden;
+  .content{
+    .site-contact-address{
+      padding: 23px 37px 104px 37px;
+      span{
+        display: block;
+        padding-bottom: 10px;
+        font-family: 'suisse';
+        font-size: 14px;
+        line-height: 21px;
+        color: #fff;
+      }
+    }
+  }
+}
+.copyright{
+  display: block;
+  text-align: left;
+  padding: 20px 25px;
+  color: #fff;
+  font-family: 'suisse';
+  font-size: 14px;
+  line-height: 21px;
+  a{
+    color: inherit;
+  }
+}
